@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.list {
+  list-style: none;
+  text-align: right;
+}
+
+.list li {
+  margin: 8px 0 30px;
+}
+
+a {
+  font-size: 20px;
+  color: var(--colour-blue);
+}
+
+a:visited {
+  color: var(--colour-blue);
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .list {
+    text-align: left;
+  }
+}
