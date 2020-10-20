@@ -1,9 +1,9 @@
 import React from "react"
 
-export default function Header() {
+export default function Header({ text }) {
   return (
     <header>
-      <h1>Vaughan Stedman </h1>
+      <h1>{text}</h1>
     </header>
   )
 }

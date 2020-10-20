@@ -7,7 +7,7 @@ import ContentBox from "../components/ContentBox"
 export default function Home() {
   return (
     <Layout>
-      <Header />
+      <Header text="Vaughan Stedman" />
       <main className={styles.container}>
         <ContentBox>
           <p>Software Engineer</p>
@@ -16,12 +16,15 @@ export default function Home() {
 
         <ul className={styles.list}>
           <li>
-            <a className="plus-tag" href="www.google.com">
+            <a className="plus-tag" href="/photos">
               Photography
             </a>
           </li>
           <li>
-            <a className="plus-tag" href="www.google.com">
+            <a
+              className="plus-tag"
+              href="https://www.backyardbiodiversity.com.au"
+            >
               Backyard Biodiversity
             </a>
           </li>
