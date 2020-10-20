@@ -20,6 +20,13 @@ body,
 #root {
   min-height: 100vh;
   --colour-blue: #0000ee;
+  --colour-red: #ee0000;
+  --colour-white: #ffffff;
+}
+
+main {
+  padding: 40px;
+  max-width: 1080px;
 }
 
 a {
@@ -34,6 +41,36 @@ h1 {
   font-size: 28px;
 }
 
+button {
+  display: inline-block;
+  font-family: "Roboto Mono", monospace;
+  font-size: 14px;
+  border: none;
+  text-decoration: none;
+  background: var(--colour-white);
+  color: var(--colour-blue);
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  text-decoration: underline;
+  outline: none;
+}
+
+button.active {
+  color: var(--colour-red);
+}
+
+button.active:hover {
+  cursor: default;
+}
+
 .plus-tag {
   position: relative;
 }
@@ -46,7 +83,8 @@ h1 {
   left: -10px;
 }
 
-.plus-tag:hover:before {
+.plus-tag:hover:before,
+.plus-tag:focus:before {
   transition: 0.1s;
   top: -12px;
   left: -8px;

@@ -2,32 +2,40 @@ import React from "react"
 import styles from "./index.module.css"
 import Header from "../components/Header"
 import ContentBox from "../components/ContentBox"
+import Amplify from "aws-amplify"
+import awsConfig from "../aws-config"
+
+Amplify.configure(awsConfig.amplify)
 
 export default function Home() {
+  const links = [
+    { text: "Photography", ref: "/photos" },
+    { text: "Github", ref: "https://github.com/vpste1" },
+    {
+      text: "Backyard Biodiversity",
+      ref: "https://www.backyardbiodiversity.com.au",
+    },
+  ]
   return (
     <>
       <Header text="Vaughan Stedman" />
-      <main className={styles.container}>
-        <ContentBox>
-          <p>Software Engineer</p>
-          <p>Melbourne, Australia</p>
-        </ContentBox>
+      <main>
+        <div className={styles.container}>
+          <ContentBox>
+            <p>Software Engineer</p>
+            <p>Melbourne, Australia</p>
+          </ContentBox>
 
-        <ul className={styles.list}>
-          <li>
-            <a className="plus-tag" href="/photos">
-              Photography
-            </a>
-          </li>
-          <li>
-            <a
-              className="plus-tag"
-              href="https://www.backyardbiodiversity.com.au"
-            >
-              Backyard Biodiversity
-            </a>
-          </li>
-        </ul>
+          <ul className={styles.list}>
+            {links.map(link => (
+              <li key={link.ref}>
+                <a className="plus-tag" href={link.ref}>
+                  {link.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </main>
     </>
   )
