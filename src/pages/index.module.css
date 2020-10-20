@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   padding: 40px;
+  max-width: 1080px;
 }
 
 .list {
+  margin-top: 80px;
   list-style: none;
   text-align: right;
 }
@@ -30,6 +32,7 @@ a:visited {
   }
 
   .list {
+    margin: 0;
     text-align: left;
   }
 }

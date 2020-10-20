@@ -30,6 +30,10 @@ header {
   margin: 40px;
 }
 
+h1 {
+  font-size: 28px;
+}
+
 .plus-tag {
   position: relative;
 }
@@ -46,4 +50,10 @@ header {
   transition: 0.1s;
   top: -12px;
   left: -8px;
+}
+
+@media screen and (min-width: 576px) {
+  h1 {
+    font-size: 32px;
+  }
 }

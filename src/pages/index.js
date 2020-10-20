@@ -1,12 +1,11 @@
 import React from "react"
 import styles from "./index.module.css"
-import Layout from "../components/Layout"
 import Header from "../components/Header"
 import ContentBox from "../components/ContentBox"
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <Header text="Vaughan Stedman" />
       <main className={styles.container}>
         <ContentBox>
@@ -30,6 +29,6 @@ export default function Home() {
           </li>
         </ul>
       </main>
-    </Layout>
+    </>
   )
 }
