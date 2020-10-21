@@ -2,10 +2,6 @@ import React from "react"
 import styles from "./index.module.css"
 import Header from "../components/Header"
 import ContentBox from "../components/ContentBox"
-import Amplify from "aws-amplify"
-import awsConfig from "../aws-config"
-
-Amplify.configure(awsConfig.amplify)
 
 export default function Home() {
   const links = [
