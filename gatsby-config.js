@@ -6,5 +6,6 @@ module.exports = {
         bucketName: "vaughanstedman.com",
       },
     },
+    `gatsby-plugin-react-helmet`,
   ],
 }

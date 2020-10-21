@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import styles from "./index.module.css"
 import Header from "../components/Header"
 import ContentBox from "../components/ContentBox"
@@ -14,6 +15,10 @@ export default function Home() {
   ]
   return (
     <>
+      <Helmet>
+        <title>Vaughan Stedman</title>
+      </Helmet>
+
       <Header text="Vaughan Stedman" />
       <main>
         <div className={styles.container}>

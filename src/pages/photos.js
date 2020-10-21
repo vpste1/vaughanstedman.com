@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Helmet } from "react-helmet"
 import Header from "../components/Header"
 import NavBar from "../components/NavBar"
 import ImageGallery from "../components/ImageGallery"
@@ -34,6 +35,9 @@ export default function Photos() {
 
   return (
     <>
+      <Helmet>
+        <title>Vaughan Stedman - Photos</title>
+      </Helmet>
       <Header showBack text="Photos" />
       <main>
         {loading ? (
