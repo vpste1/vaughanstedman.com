@@ -10,7 +10,7 @@ export default function Home() {
     { text: "Github", ref: "https://github.com/vpste1" },
     {
       text: "Backyard Biodiversity",
-      ref: "https://www.backyardbiodiversity.com.au",
+      ref: "http://www.backyard-biodiversity.com",
     },
   ]
   return (
